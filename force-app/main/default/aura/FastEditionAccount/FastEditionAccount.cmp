@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForAllPageTypes, force:hasRecordId" access="global">
+    <lightning:card title="Atualização Rápida">
+        <div style="padding: 10px;">
+        <lightning:recordEditForm 
+            recordId="{!v.recordId}"
+            objectApiName="Account"
+            onsuccess="{!c.handleSuccess}"
+        >
+            <lightning:messages />
+            <lightning:inputField fieldName="Name" />
+            <lightning:inputField fieldName="AccountNumber" />
+            <lightning:inputField fieldName="Type" />
+            <div class="slds-clearfix">
+                <lightning:button class="slds-float_right" variant="brand" type="submit" name="update" label="Update" />
+            </div>
+        </lightning:recordEditForm>
+        </div>
+    </lightning:card>
+</aura:component>
